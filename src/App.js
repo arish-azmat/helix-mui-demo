@@ -19,7 +19,7 @@ import logo from './assets/images/logo.PNG'
 import Studies from './components/studies/Studies';
 import Dashboard from './components/dashboard'
 import { Link, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-const drawerWidth = 240;
+const drawerWidth = 160;
 
 export default function App(props) {
   const h = useNavigate();
