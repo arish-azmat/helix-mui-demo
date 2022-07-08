@@ -19,8 +19,13 @@ import logo from './assets/images/logo.PNG'
 import Studies from './components/studies/Studies';
 import Dashboard from './components/dashboard'
 import { Link, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { makeStyles } from '@mui/styles';
 const drawerWidth = 160;
-
+const useStyles = makeStyles({
+  root: {
+    background: '#fff'
+  }
+})
 export default function App(props) {
   const h = useNavigate();
   const l = useLocation();
@@ -30,11 +35,12 @@ export default function App(props) {
     }
   }, [])
 
+ const classes = useStyles()
   return (
 
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+      <AppBar position="fixed" color={''} sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <img src={logo} height={'50'} />
         </Toolbar>
