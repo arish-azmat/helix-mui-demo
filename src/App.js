@@ -42,7 +42,7 @@ export default function App(props) {
       <CssBaseline />
       <AppBar position="fixed" color={''} sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
-          <img src={logo} height={'50'} />
+          <img src={logo} height={'65'} />  <h3 style={{color:"#0B07A9",marginLeft:15}}> | SIGMA</h3>
         </Toolbar>
       </AppBar>
       <Drawer

@@ -8,7 +8,7 @@ const columns = [
 export default function Study({study}) {
     
     return (
-        <Card style={{paddingLeft:'15px'}}>
+        <Card style={{paddingLeft:'15px',marginTop:15}}>
             <Grid container >
                 {
                     columns.map((item,index) => <Grid item md={1.5}>
@@ -18,7 +18,7 @@ export default function Study({study}) {
                 }
 
             </Grid>
-            <p>{study.StudyTitle}</p>
+            <p style={{fontSize:12}}>{study.StudyTitle}</p>
         </Card>
     )
 }
