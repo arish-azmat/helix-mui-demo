@@ -5,6 +5,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Flex from '../../common/Flex';
 import Study from './Study';
+import _ from 'lodash';
 const useStyles = makeStyles(theme => ({
     root: {
         padding: '0px',
@@ -14,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const studies1 = [
+const studies = [
     {
         "StudyId": "ONC1234",
         "Compound": "SU011248",
@@ -75,16 +76,30 @@ const studies1 = [
 
 export default function Studies() {
     const classes = useStyles();
-    const [studies, setStudies] = useState(studies1);
+
     const [alignment, setAlignment] = useState('All');
     const [favList, setFavList] = useState([]);
-    
+    const categories = {
+        All: studies,
+        Favorites: favList
+    }
 
     const handleChange = (event, newAlignment) => {
+        if(newAlignment)
         setAlignment(newAlignment);
     };
+
+    const markUnmarkAsFav = (study) => {
+        if (favList.filter((item) => item.StudyId === study.StudyId).length > 0) {
+            const fav = [...favList];
+            _.remove(fav, (it) => it.StudyId === study.StudyId);
+            setFavList(fav)
+        } else {
+            favList.push(study)
+        }
+    }
     return (
-        <Fragment>
+        <Fragment style={{ marginTop: 20 }}>
             <Flex verticalContent={'center'} isFlex={true} >
                 <Typography variant='h6'>Studies</Typography>
                 <ToggleButtonGroup
@@ -99,8 +114,8 @@ export default function Studies() {
                     <ToggleButton value="Favorites">Favorites</ToggleButton>
                 </ToggleButtonGroup>
             </Flex>
-            <Card>
-                {studies.map((study) => <Study setFavList={setFavList} study={study} />)}
+            <Card style={{ marginTop: 10,boxShadow:'none' }}>
+                {categories[alignment].map((study) => <Study markUnmarkAsFav={markUnmarkAsFav} study={study} />)}
 
             </Card>
         </Fragment>
