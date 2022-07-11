@@ -81,7 +81,7 @@ export default function Studies() {
         setAlignment(newAlignment);
     };
     return (
-        <Fragment>
+        <Fragment style={{marginTop:20}}>
             <Flex verticalContent={'center'} isFlex={true} >
                 <Typography variant='h6'>Studies</Typography>
                 <ToggleButtonGroup
