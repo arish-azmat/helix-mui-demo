@@ -21,15 +21,16 @@ export default function Study({ study, markUnmarkAsFav }) {
                 </Grid>
                 {
                     columns.map((item, index) => <Grid item md={1.46}>
-                        <p>{item}</p>
-                        <p><strong>{Object.values(study)[index]}</strong></p>
+                        <p style={{ margin: '15px 0 0 0', fontSize: '14px' }}>{item}</p>
+                        <p style={{ margin: '5px 0 15px 0' }}><strong>{Object.values(study)[index]}</strong></p>
                     </Grid>)
                 }
                 <Grid item md={0.3}></Grid>
-                <Grid item md={11}  onClick={()=>setShowTitle(!showTitle)}>
+                <Grid item md={11} onClick={() => setShowTitle(!showTitle)}>
+                    <p style={{ margin: '0px', fontSize: '14px' }}>Study Title</p>
                     <p style={{
                         fontSize: 12,
-                        cursor:'pointer',
+                        cursor: 'pointer',
                         ...(showTitle ? {} : {
                             display: "-webkit-box",
                             "-webkit-line-clamp": "1",
@@ -38,8 +39,8 @@ export default function Study({ study, markUnmarkAsFav }) {
                         })
                     }}>{study.StudyTitle}</p>
                 </Grid>
-                <Grid item md={0.7}  onClick={()=>setShowTitle(!showTitle)}>
-                {showTitle ? <KeyboardArrowUpIcon style={{ margin: '8px 0', cursor: "pointer" }} /> : <KeyboardArrowDownIcon style={{ margin: '8px 0', cursor: "pointer" }} />}
+                <Grid item md={0.7} onClick={() => setShowTitle(!showTitle)}>
+                    {showTitle ? <KeyboardArrowUpIcon style={{ margin: '8px 0', cursor: "pointer" }} /> : <KeyboardArrowDownIcon style={{ margin: '8px 0', cursor: "pointer" }} />}
                 </Grid>
             </Grid>
 

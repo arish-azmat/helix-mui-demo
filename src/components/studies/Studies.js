@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography } from '@mui/material'
+import { Button, Card, CardContent, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import React, { Fragment, useState } from 'react'
 import ToggleButton from '@mui/material/ToggleButton';
@@ -6,6 +6,8 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Flex from '../../common/Flex';
 import Study from './Study';
 import _ from 'lodash';
+import styled from '@emotion/styled';
+import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 const useStyles = makeStyles(theme => ({
     root: {
         padding: '0px',
@@ -73,6 +75,18 @@ const studies = [
     }
 ]
 
+const SearchBox = styled('input')`
+border-radius:15px;
+width:330px;
+height:25px;
+padding:0 10px;
+position:relative;
+border:1px solid #00000036;
+&:focus{
+border:2px solid #0000c9;
+}
+`;
+
 
 export default function Studies() {
     const classes = useStyles();
@@ -85,8 +99,8 @@ export default function Studies() {
     }
 
     const handleChange = (event, newAlignment) => {
-        if(newAlignment)
-        setAlignment(newAlignment);
+        if (newAlignment)
+            setAlignment(newAlignment);
     };
 
     const markUnmarkAsFav = (study) => {
@@ -100,7 +114,7 @@ export default function Studies() {
     }
     return (
         <Fragment style={{ marginTop: 20 }}>
-            <Flex verticalContent={'center'} isFlex={true} >
+            <Flex style={{ position: 'relative' }} verticalContent={'center'} isFlex={true} >
                 <Typography variant='h6'>Studies</Typography>
                 <ToggleButtonGroup
                     sx={{ marginLeft: '10px' }}
@@ -113,8 +127,15 @@ export default function Studies() {
                     <ToggleButton value="All">All</ToggleButton>
                     <ToggleButton value="Favorites">Favorites</ToggleButton>
                 </ToggleButtonGroup>
+                <div style={{ position: 'absolute', right: '20px', display: 'flex', alignItems: 'center' }}>
+                    <SearchBox placeholder='Type TA, Indication, Compound, Protocol etc.' type="text" />
+                    <div style={{ margin: '0 20px', display: 'inline-flex', justifyContent: 'center', width: '30px', height: '30px', alignItems: 'center', background: '#8080803d', borderRadius: "50%" }}>
+                        <FilterAltOutlinedIcon />
+                    </div>
+                    <Button variant='contained'>Add New Study +</Button>
+                </div>
             </Flex>
-            <Card style={{ marginTop: 10,boxShadow:'none' }}>
+            <Card style={{ marginTop: 10, boxShadow: 'none' }}>
                 {categories[alignment].map((study) => <Study markUnmarkAsFav={markUnmarkAsFav} study={study} />)}
 
             </Card>
