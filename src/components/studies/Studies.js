@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const studies = [
+const studies1 = [
     {
         "StudyId": "ONC1234",
         "Compound": "SU011248",
@@ -75,7 +75,10 @@ const studies = [
 
 export default function Studies() {
     const classes = useStyles();
+    const [studies, setStudies] = useState(studies1);
     const [alignment, setAlignment] = useState('All');
+    const [favList, setFavList] = useState([]);
+    
 
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
@@ -97,7 +100,7 @@ export default function Studies() {
                 </ToggleButtonGroup>
             </Flex>
             <Card>
-                {studies.map((study) => <Study study={study} />)}
+                {studies.map((study) => <Study setFavList={setFavList} study={study} />)}
 
             </Card>
         </Fragment>
