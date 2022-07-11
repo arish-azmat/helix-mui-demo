@@ -128,7 +128,7 @@ export default function Studies() {
                     <ToggleButton value="Favorites">Favorites</ToggleButton>
                 </ToggleButtonGroup>
                 <div style={{ position: 'absolute', right: '20px', display: 'flex', alignItems: 'center' }}>
-                    <SearchBox placeholder='Type TA, Indication, Compound, Protocol etc.' type="text" />
+                    <SearchBox placeholder='Type TA, Indication, Compound, Protocol etc.' type="text" height={100}/>
                     <div style={{ margin: '0 20px', display: 'inline-flex', justifyContent: 'center', width: '30px', height: '30px', alignItems: 'center', background: '#8080803d', borderRadius: "50%" }}>
                         <FilterAltOutlinedIcon />
                     </div>

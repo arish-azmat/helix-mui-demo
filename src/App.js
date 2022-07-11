@@ -22,6 +22,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import logo from './assets/images/logo.PNG'
 import Studies from './components/studies/Studies';
+import StudyDetails from "./components/studies/StudyDetails";
 import Dashboard from './components/dashboard';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -112,6 +113,11 @@ export default function App(props) {
             exact
             path="/Studies"
             element={<Studies />}
+          />
+            <Route
+            exact
+            path="/Studies/:studyID"
+            element={<StudyDetails />}
           />
           <Route
             exact

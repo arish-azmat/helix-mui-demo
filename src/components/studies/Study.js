@@ -22,7 +22,7 @@ export default function Study({ study, markUnmarkAsFav }) {
                 {
                     columns.map((item, index) => <Grid item md={1.46}>
                         <p style={{ margin: '15px 0 0 0', fontSize: '14px' }}>{item}</p>
-                        <p style={{ margin: '5px 0 15px 0' }}><strong>{Object.values(study)[index]}</strong></p>
+                        <p style={{ margin: '5px 0 15px 0' }}><strong>{ item == "Study Id" ? <a href={`#/Studies/${Object.values(study)[index]}`}>{Object.values(study)[index]}</a> : <span>{Object.values(study)[index]}</span>}</strong></p>
                     </Grid>)
                 }
                 <Grid item md={0.3}></Grid>
