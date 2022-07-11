@@ -96,7 +96,7 @@ export default function Studies() {
                     <ToggleButton value="Favorites">Favorites</ToggleButton>
                 </ToggleButtonGroup>
             </Flex>
-            <Card>
+            <Card style={{marginTop:10}}>
                 {studies.map((study) => <Study study={study} />)}
 
             </Card>

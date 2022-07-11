@@ -21,9 +21,5 @@ code {
 ::-webkit-scrollbar-thumb { background-color:#babac0;border-radius:16px;border:4px solid #fff;}
 ::-webkit-scrollbar-button {display:none}
 
-.sigma-btn {
-  border: 2px solid transparent !important;
-  border-radius: 20px !important;
-  background: #0000c9;
-  border-color: #0000c9;
-}
+/* Helix */
+.sigma-btn { border: 2px solid transparent !important; border-radius: 20px !important;background: #0000c9;border-color: #0000c9;}

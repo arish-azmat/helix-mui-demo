@@ -88,7 +88,7 @@ export default function App(props) {
           <List>
             {['Dashboard', 'Studies', 'Settings'].map((text, index) => (
 
-              <ListItem key={text} disablePadding>
+              <ListItem key={text} >
 
                 <ListItemButton onClick={() => { h("/" + text) }}>
                   <ListItemIcon>
