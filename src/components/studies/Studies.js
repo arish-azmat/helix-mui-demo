@@ -136,7 +136,7 @@ export default function Studies() {
                 </div>
             </Flex>
             <Card style={{ marginTop: 10, boxShadow: 'none' }}>
-                {categories[alignment].map((study) => <Study markUnmarkAsFav={markUnmarkAsFav} study={study} />)}
+                {categories[alignment].map((study) => <Study key={study.StudyId} markUnmarkAsFav={markUnmarkAsFav} study={study} />)}
 
             </Card>
         </Fragment>
