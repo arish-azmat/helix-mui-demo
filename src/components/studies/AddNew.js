@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Grid, Button, Box, TextField, Tab, makeStyles } from '@mui/material';
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import KeyInformationForm from "./KeyInformationForm";
+import StudyTypeDesign from "./StudyTypeDesign";
 
 
 
@@ -21,7 +22,7 @@ export default function AddNew() {
             <TabPanel value="1">
                 <KeyInformationForm handleTabChange={handleTabChange} />
             </TabPanel>
-            <TabPanel value="2">Study Type/Design</TabPanel>
+            <TabPanel value="2"><StudyTypeDesign /></TabPanel>
         </TabContext>
     </div>)
 }
