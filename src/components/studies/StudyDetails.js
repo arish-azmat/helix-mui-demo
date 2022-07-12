@@ -5,12 +5,8 @@ import GrainIcon from '@mui/icons-material/Grain';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import { Card, Grid, Button, Box } from '@mui/material';
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@mui/material/Tabs';
-import TabContext from '@material-ui/lab/TabContext';
-import TabList from '@material-ui/lab/TabList';
-import TabPanel from '@material-ui/lab/TabPanel';
+import { Card, Grid, Button, Box, Tab } from '@mui/material';
+import { TabContext,TabList,TabPanel } from "@mui/lab";
 
 
 
