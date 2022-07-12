@@ -60,14 +60,19 @@ const theme = createTheme({
                 }
             },
         },
-        MuiAutocomplete:{
-            styleOverrides:{
-                root:{
-                    padding:'0px'
+        MuiAutocomplete: {
+            styleOverrides: {
+                root: {
+                    padding: '0px',
+                    borderRadius: '20px'
                 },
-                
-                inputRoot:{
-                    padding:'0px !important' 
+
+                inputRoot: {
+                    padding: '0px !important',
+                    borderRadius: '20px'
+                },
+                popupIndicator: {
+                    background: '#fff'
                 }
             }
         }
