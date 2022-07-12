@@ -132,7 +132,7 @@ export default function Studies() {
                     <div style={{ margin: '0 20px', display: 'inline-flex', justifyContent: 'center', width: '30px', height: '30px', alignItems: 'center', background: '#8080803d', borderRadius: "50%" }}>
                         <FilterAltOutlinedIcon />
                     </div>
-                    <Button variant='contained'>Add New Study +</Button>
+                    <Button variant='contained' className='sigma-btn'><a href="#/Studies/AddNew">Add New Study +</a></Button>
                 </div>
             </Flex>
             <Card style={{ marginTop: 10, boxShadow: 'none' }}>

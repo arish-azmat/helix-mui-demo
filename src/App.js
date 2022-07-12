@@ -24,6 +24,7 @@ import logo from './assets/images/logo.PNG'
 import Studies from './components/studies/Studies';
 import StudyDetails from "./components/studies/StudyDetails";
 import Dashboard from './components/dashboard';
+import AddNew from "./components/studies/AddNew";
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -62,16 +63,16 @@ export default function App(props) {
         <Toolbar>
           <Grid container spacing={3}>
             <Grid item xs={1}>
-              <img src={transLogo} height={'45'} style={{ marginTop: 15}}/>
+              <img src={logo} height={'70'} style={{ marginTop: 5 }} />
             </Grid>
             <Grid item xs={7}></Grid>
             <Grid item xs={4}>
-              <div style={{ marginTop: 25, fontSize: 20,float:"right" }}>
+              <div style={{ marginTop: 25, fontSize: 20, float: "right" }}>
                 <SearchIcon />
                 <AccountCircleIcon style={{ marginLeft: 15 }} />
                 <NotificationsIcon style={{ marginLeft: 15 }} />
                 <ShoppingCartIcon style={{ marginLeft: 15 }} />
-                <Button variant='contained' style={{ marginLeft: 18,marginTop:-13 }} className="sigma-btn">LOG OUT</Button>
+                <Button variant='contained' style={{ marginLeft: 18, marginTop: -13 }} className="sigma-btn">LOG OUT</Button>
               </div>
             </Grid>
           </Grid>
@@ -86,7 +87,7 @@ export default function App(props) {
         }}
       >
         <Toolbar />
-        <Box sx={{ overflow: 'auto',marginTop:2 }}>
+        <Box sx={{ overflow: 'auto', marginTop: 2 }}>
           <List>
             {['Dashboard', 'Studies', 'Settings'].map((text, index) => (
 
@@ -105,7 +106,7 @@ export default function App(props) {
           </List>
         </Box>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }} style={{marginTop:15}}>
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }} style={{ marginTop: 15 }}>
         <Toolbar />
 
         <Routes>
@@ -114,7 +115,7 @@ export default function App(props) {
             path="/Studies"
             element={<Studies />}
           />
-            <Route
+          <Route
             exact
             path="/Studies/:studyID"
             element={<StudyDetails />}
@@ -123,6 +124,11 @@ export default function App(props) {
             exact
             path="/Dashboard"
             element={<Dashboard />}
+          />
+          <Route
+            exact
+            path="/Studies/AddNew"
+            element={<AddNew />}
           />
 
 

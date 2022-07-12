@@ -80,7 +80,7 @@ function Dashboard() {
                   disablePadding
                 >
                   <ListItemButton>
-                    <ListItemText primary={text} />
+                   <a href={`#/Studies/${text}`}> <ListItemText primary={text} /></a>
                   </ListItemButton>
                 </ListItem>
                 </Paper>
