@@ -78,6 +78,17 @@ const theme = createTheme({
                     background: '#fff'
                 }
             }
+        },
+        MuiPopover: {
+           styleOverrides: {
+            root: {
+                width:'500px'
+            },
+            paper :{
+                width:'500px',
+                padding:'5px'
+            }
+           }
         }
 
     }
