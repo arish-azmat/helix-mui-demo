@@ -42,6 +42,7 @@ import {
 import transLogo from "../src/assets/images/Pfizer_Logo_White_RGB.png";
 import { makeStyles } from "@mui/styles";
 import ChangeTheme from "./common/ChangeTheme";
+import Header from "./components/Header";
 
 const drawerWidth = 160;
 const useStyles = makeStyles({
@@ -379,43 +380,13 @@ export default function App(props) {
           </Grid>
         </Toolbar>
       </AppBar>
-      <Drawer
-        variant="permanent"
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          [`& .MuiDrawer-paper`]: {
-            width: drawerWidth,
-            boxSizing: "border-box",
-          },
-        }}
-      >
-        <Toolbar />
-        <Box sx={{ overflow: "auto", marginTop: 2 }}>
-          <List>
-            {["Dashboard", "Studies", "Settings"].map((text, index) => (
-              <ListItem key={text}>
-                <ListItemButton
-                  onClick={() => {
-                    h("/" + text);
-                  }}
-                >
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-        </Box>
-      </Drawer>
+    
       <Box
         component="main"
         sx={{ flexGrow: 1, p: 3 }}
         style={{ marginTop: 15 }}
       >
-        <Toolbar />
+         <Header/>
 
         <Routes>
           <Route exact path="/Studies" element={<Studies />} />
@@ -446,3 +417,38 @@ function TabPanel(props) {
     </div>
   );
 }
+
+
+// old sidebar
+
+{/*   <Drawer
+        variant="permanent"
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          [`& .MuiDrawer-paper`]: {
+            width: drawerWidth,
+            boxSizing: "border-box",
+          },
+        }}
+      >
+        <Toolbar />
+        <Box sx={{ overflow: "auto", marginTop: 2 }}>
+          <List>
+            {["Dashboard", "Studies", "Settings"].map((text, index) => (
+              <ListItem key={text}>
+                <ListItemButton
+                  onClick={() => {
+                    h("/" + text);
+                  }}
+                >
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer> */}

@@ -7,28 +7,14 @@ const AppTheme = ({ children, type }) => {
     let theme = null;
     if (type === "mui") {  //process.env.REACT_APP_TYPE.trim() === "mui" for env 
         theme = createTheme({
-            components: {
-                MuiButton: {
-                    styleOverrides: {
-                        root: {
-                            background: 'red'
-                        }
-                    }
-                }
+            palette: {
+                primary: {
+                    main: "#eb0014",
+                },
             },
-            MuiPopover: {
-                styleOverrides: {
-                    root: {
-                        width: '500px'
-                    },
-                    paper: {
-                        width: '500px',
-                        padding: '5px'
-                    }
-                }
-            }
+           
         });
-    } else {
+    } else if (type === "helix") {
         theme = createTheme({
             palette: {
                 primary: {
@@ -106,6 +92,12 @@ const AppTheme = ({ children, type }) => {
                         popupIndicator: {
                             background: '#fff'
                         }
+                    }
+                }, MuiBottomNavigation: {
+                    styleOverrides: {
+                        root: {
+                            justifyContent: 'start',
+                        },
                     }
                 }
 

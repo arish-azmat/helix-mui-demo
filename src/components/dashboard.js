@@ -15,6 +15,7 @@ import {
   ListItemText,
   Typography,
   Button,
+  Link,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
@@ -80,7 +81,7 @@ function Dashboard() {
                     disablePadding
                   >
                     <ListItemButton>
-                      <a href={`#/Studies/${text}`}> <ListItemText primary={text} /></a>
+                      <Link href={`#/Studies/${text}`}> <ListItemText primary={text} /></Link>
                     </ListItemButton>
                   </ListItem>
                 </Paper>
