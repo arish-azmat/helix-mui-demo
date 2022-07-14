@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Grid, Button, Box, TextField, Tab, makeStyles } from '@mui/material';
+import {  Box, TextField, Tab, makeStyles } from '@mui/material';
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import KeyInformationForm from "./KeyInformationForm";
 import StudyTypeDesign from "./StudyTypeDesign";

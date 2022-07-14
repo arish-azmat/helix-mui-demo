@@ -7,16 +7,13 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme/AppTheme';
 import { HashRouter } from 'react-router-dom';
-
-
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
+console.log(process.env);
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <HashRouter>
-      <App />
+        <App />
       </HashRouter>
     </ThemeProvider>
   </React.StrictMode>
