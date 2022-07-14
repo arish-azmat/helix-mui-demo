@@ -11,6 +11,17 @@ if (process.env.REACT_APP_TYPE.trim() === "mui") {
                     }
                 }
             }
+        },
+        MuiPopover: {
+           styleOverrides: {
+            root: {
+                width:'500px'
+            },
+            paper :{
+                width:'500px',
+                padding:'5px'
+            }
+           }
         }
     });
 } else {
