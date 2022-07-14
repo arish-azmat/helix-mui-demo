@@ -41,6 +41,7 @@ import {
 } from "react-router-dom";
 import transLogo from "../src/assets/images/Pfizer_Logo_White_RGB.png";
 import { makeStyles } from "@mui/styles";
+import ChangeTheme from "./common/ChangeTheme";
 
 const drawerWidth = 160;
 const useStyles = makeStyles({
@@ -154,6 +155,7 @@ export default function App(props) {
             <Grid item xs={7}></Grid>
             <Grid item xs={4}>
               <div style={{ marginTop: 25, fontSize: 20, float: "right" }}>
+                <ChangeTheme type={props.type} setType={props.setType} />
                 <SearchIcon />
                 <AccountCircleIcon style={{ marginLeft: 15 }} />
                 {/* <Badge badgeContent={3} color="primary"> */}
@@ -195,8 +197,9 @@ export default function App(props) {
                     {unreadStudies.map((s) => {
                       return (
                         <Paper
+                          key={s.StudyId}
                           style={{ padding: "10px", marginBottom: "10px" }}
-                          elevation={"1"}
+                          elevation={1}
                         >
                           <Grid container>
                             <Grid item md={5}>
@@ -288,8 +291,9 @@ export default function App(props) {
                     {readstudies.map((s) => {
                       return (
                         <Paper
+                          key={s.StudyId}
                           style={{ padding: "10px", marginBottom: "10px" }}
-                          elevation={"1"}
+                          elevation={1}
                         >
                           <Grid container>
                             <Grid item md={5}>

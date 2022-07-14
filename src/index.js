@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme/AppTheme';
 import { HashRouter } from 'react-router-dom';
+import AppTheme from './theme/AppTheme';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-console.log(process.env);
+
+const Application = () => {
+  const [type, setType] = useState('helix')
+  return <AppTheme type={type}>
+    <HashRouter>
+      <App type={type} setType={setType} />
+    </HashRouter>
+  </AppTheme>
+}
+
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </ThemeProvider>
+    <Application />
   </React.StrictMode>
 );
 

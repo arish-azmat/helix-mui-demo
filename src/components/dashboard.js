@@ -14,7 +14,7 @@ import {
   ListItemButton,
   ListItemText,
   Typography,
-  Button ,
+  Button,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
@@ -42,7 +42,7 @@ const useStyles2 = makeStyles({
 const useStylesBtn = makeStyles({
   root: {
     float: "right",
-    marginTop:'20px'
+    marginTop: '20px'
   },
 });
 function Dashboard() {
@@ -53,7 +53,7 @@ function Dashboard() {
     <div>
       <Grid container spacing={{ xs: 2, md: 2 }}>
         {Array.from(Array(4)).map((_, index) => (
-          <Grid item xs={2} sm={4} md={3} key={index}>
+          <Grid key={index} item xs={2} sm={4} md={3} >
             <Card className={classes.root} variant="outlined">
               <CardHeader></CardHeader>
               <CardContent></CardContent>
@@ -64,46 +64,46 @@ function Dashboard() {
       <Grid container spacing={{ xs: 2, md: 2 }}>
         <Grid item md={6}>
           <Card className={classes2.root} variant="outlined">
-         <div className="recent-studies">
-          <p>Recent Studies</p>
-         </div>
-           <Stack spacing={2} direction={'column'} >
-              {["ONC11248", "ONC11325", "ONC11336","ONC11340","ONC11342"].map((text, index) => (
-                <Paper elevation={5}>
+            <div className="recent-studies">
+              <p>Recent Studies</p>
+            </div>
+            <Stack spacing={2} direction={'column'} >
+              {["ONC11248", "ONC11325", "ONC11336", "ONC11340", "ONC11342"].map((text, index) => (
+                <Paper key={text} elevation={5}>
                   <ListItem
-                  key={text}
-                  secondaryAction={
-                    <Typography variant="subtitle2"
-                      edge={"end"}
-                    >{"Accessed on: 24/12/2022"}</Typography>
-                  }
-                  disablePadding
-                >
-                  <ListItemButton>
-                   <a href={`#/Studies/${text}`}> <ListItemText primary={text} /></a>
-                  </ListItemButton>
-                </ListItem>
+
+                    secondaryAction={
+                      <Typography variant="subtitle2"
+                        edge={"end"}
+                      >{"Accessed on: 24/12/2022"}</Typography>
+                    }
+                    disablePadding
+                  >
+                    <ListItemButton>
+                      <a href={`#/Studies/${text}`}> <ListItemText primary={text} /></a>
+                    </ListItemButton>
+                  </ListItem>
                 </Paper>
               ))}
-              
+
             </Stack>
-            <Button className={`${classesBtn.root} sigma-btn`} variant="contained" style={{marginTop:20}}>View all</Button>
+            <Button className={`${classesBtn.root} sigma-btn`} variant="contained" style={{ marginTop: 20 }}>View all</Button>
           </Card>
         </Grid>
         <Grid item md={6}>
           <Grid item md={12}>
-          <Card className={classes.root} variant="outlined">
-            <CardHeader></CardHeader>
-            <CardContent></CardContent>
-          </Card>
+            <Card className={classes.root} variant="outlined">
+              <CardHeader></CardHeader>
+              <CardContent></CardContent>
+            </Card>
           </Grid>
           <Grid item md={12}>
-          <Card className={classes.root} variant="outlined">
-            <CardHeader></CardHeader>
-            <CardContent></CardContent>
-          </Card>
+            <Card className={classes.root} variant="outlined">
+              <CardHeader></CardHeader>
+              <CardContent></CardContent>
+            </Card>
           </Grid>
-          
+
         </Grid>
       </Grid>
     </div>
