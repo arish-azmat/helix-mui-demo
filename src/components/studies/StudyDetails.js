@@ -48,7 +48,7 @@ export default function StudyDetails() {
             </Breadcrumbs>
         </p>
         <Card variant="outlined" style={{ marginTop: 20, padding: 15 }}>
-            <p><h4>Study Information             <Button variant='contained' className='sigma-btn' style={{ float: "right" }}>VIEW DETAILS</Button>
+            <p><h4>Study Information             <Button variant='contained' style={{ float: "right" }}>VIEW DETAILS</Button>
             </h4>
             </p>
             <p style={{ color: "gray" }}>Study Title</p>
