@@ -12,7 +12,16 @@ const AppTheme = ({ children, type }) => {
                     main: "#eb0014",
                 },
             },
-           
+            components:{
+                MuiAppBar:{
+                    styleOverrides:{
+                        root:{
+                            // background:'#00000087'
+                        }
+                    }
+                }
+            }
+
         });
     } else if (type === "helix") {
         theme = createTheme({
@@ -96,10 +105,23 @@ const AppTheme = ({ children, type }) => {
                 }, MuiBottomNavigation: {
                     styleOverrides: {
                         root: {
-                            justifyContent: 'start',
+                            background: "#0000C9",
                         },
+
                     }
-                }
+                },
+                MuiBottomNavigationAction: {
+                    styleOverrides: {
+                        root: {
+                            color: "#ffffffbf",
+                            "&.Mui-selected": {
+                                "color": "#fff"
+                            }
+                        },
+
+
+                    }
+                },
 
             }
         });

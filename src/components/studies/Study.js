@@ -20,7 +20,7 @@ export default function Study({ study, markUnmarkAsFav }) {
                     {fav ? <StarIcon style={{ margin: '15px 0', cursor: "pointer" }} /> : <StarBorderIcon style={{ margin: '15px 0', cursor: "pointer" }} />}
                 </Grid>
                 {
-                    columns.map((item, index) => <Grid item md={1.46}>
+                    columns.map((item, index) => <Grid key={index} item md={1.46}>
                         <p style={{ margin: '15px 0 0 0', fontSize: '14px' }}>{item}</p>
                         <p style={{ margin: '5px 0 15px 0' }}><strong>{ item == "Study Id" ? <Link href={`#/Studies/${Object.values(study)[index]}`}>{Object.values(study)[index]}</Link> : <span>{Object.values(study)[index]}</span>}</strong></p>
                     </Grid>)

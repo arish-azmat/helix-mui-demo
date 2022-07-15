@@ -140,6 +140,10 @@ export default function App(props) {
       StudyTitle: "A PHASE 3, RANDOMIZED, OBSERVER-BLIND STUDY TO EVALUATE",
     },
   ];
+  const Logo={
+    helix:logo,
+    mui:'https://www.saama.com/wp-content/themes/saama/assets/img/saama-logo-white-tag.svg'
+  }
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -151,7 +155,7 @@ export default function App(props) {
         <Toolbar>
           <Grid container spacing={3}>
             <Grid item xs={1}>
-              <img src={logo} height={"70"} style={{ marginTop: 5 }} />
+              <img src={Logo[props.type]} height={"70"} style={{ marginTop: 5 }} />
             </Grid>
             <Grid item xs={7}></Grid>
             <Grid item xs={4}>
@@ -380,20 +384,21 @@ export default function App(props) {
           </Grid>
         </Toolbar>
       </AppBar>
-    
+
       <Box
         component="main"
         sx={{ flexGrow: 1, p: 3 }}
-        style={{ marginTop: 15 }}
+        style={{ marginTop: 15, padding: 0 }}
       >
-         <Header/>
-
-        <Routes>
-          <Route exact path="/Studies" element={<Studies />} />
-          <Route exact path="/Studies/:studyID" element={<StudyDetails />} />
-          <Route exact path="/Dashboard" element={<Dashboard />} />
-          <Route exact path="/Studies/AddNew" element={<AddNew />} />
-        </Routes>
+        <Header />
+        <div style={{padding:'15px'}}>
+          <Routes>
+            <Route exact path="/Studies" element={<Studies />} />
+            <Route exact path="/Studies/:studyID" element={<StudyDetails />} />
+            <Route exact path="/Dashboard" element={<Dashboard />} />
+            <Route exact path="/Studies/AddNew" element={<AddNew />} />
+          </Routes>
+        </div>
       </Box>
     </Box>
   );

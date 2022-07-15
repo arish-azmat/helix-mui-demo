@@ -23,7 +23,7 @@ const navigate=useNavigate();
             navigate("/"+newValue);
           }}
         >
-          {["Dashboard", "Studies", "Settings"].map((text) => <BottomNavigationAction value={text} label={text} icon={<RestoreIcon />} />)}
+          {["Dashboard", "Studies", "Settings"].map((text) => <BottomNavigationAction key={text} value={text} label={text} icon={<RestoreIcon />} />)}
 
         </BottomNavigation>
       </div>
