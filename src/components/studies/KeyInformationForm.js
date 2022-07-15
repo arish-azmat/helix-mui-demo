@@ -83,7 +83,7 @@ export default function KeyInformationForm({ handleTabChange }) {
             </Grid>
 
 
-            <Button onClick={() => handleTabChange(null, "2")} variant='contained' className='sigma-btn' style={{ marginTop: 20, float: "right" }}>Next</Button>
+            <Button onClick={() => handleTabChange(null, "2")}  className='sigma-btn' style={{ marginTop: 20, float: "right" }}>Next</Button>
         </Fragment>
     )
 }

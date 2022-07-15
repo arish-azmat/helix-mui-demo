@@ -19,6 +19,11 @@ const AppTheme = ({ children, type }) => {
                             // background:'#00000087'
                         }
                     }
+                },
+                MuiButton:{
+                    defaultProps:{
+                        variant:'contained'
+                    }
                 }
             }
 
@@ -36,6 +41,9 @@ const AppTheme = ({ children, type }) => {
                         root: {
                             borderRadius: '20px'
                         }
+                    },
+                    defaultProps:{
+                        variant:'outlined'
                     }
                 },
                 MuiListItemIcon: {

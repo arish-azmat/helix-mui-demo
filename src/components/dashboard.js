@@ -88,7 +88,7 @@ function Dashboard() {
               ))}
 
             </Stack>
-            <Button className={`${classesBtn.root} sigma-btn`} variant="contained" style={{ marginTop: 20 }}>View all</Button>
+            <Button  style={{ marginTop: 20,float:'right' }}>View all</Button>
           </Card>
         </Grid>
         <Grid item md={6}>

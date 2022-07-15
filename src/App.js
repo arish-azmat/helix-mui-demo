@@ -373,7 +373,7 @@ export default function App(props) {
                 </Popover>
                 <ShoppingCartIcon style={{ marginLeft: 15 }} />
                 <Button
-                  variant="contained"
+                 
                   style={{ marginLeft: 18, marginTop: -13 }}
                   className="sigma-btn"
                 >

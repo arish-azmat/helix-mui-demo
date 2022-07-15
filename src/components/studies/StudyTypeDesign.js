@@ -74,8 +74,8 @@ export default function StudyTypeDesign({ handleTabChange }) {
             </Grid>
 
 
-            <Button variant='contained'  style={{ marginTop: 20, float: "right" }}>Create Study</Button>
-            <Button variant='outlined' color='primary'  style={{ marginTop: 20,marginRight:'10px', float: "right" }}>Cancel</Button>
+            <Button style={{ marginTop: 20, float: "right" }}>Create Study</Button>
+            <Button style={{ marginTop: 20,marginRight:'10px', float: "right" }}>Cancel</Button>
         </Fragment>
     )
 }
