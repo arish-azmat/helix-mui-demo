@@ -42,7 +42,7 @@ import {
 import transLogo from "../src/assets/images/Pfizer_Logo_White_RGB.png";
 import { makeStyles } from "@mui/styles";
 import ChangeTheme from "./common/ChangeTheme";
-import Header from "./components/header";
+import Header from "./components/Header";
 
 const drawerWidth = 160;
 const useStyles = makeStyles({
