@@ -163,12 +163,12 @@ export default function App(props) {
                 <ChangeTheme type={props.type} setType={props.setType} />
                 <SearchIcon />
                 <AccountCircleIcon style={{ marginLeft: 15 }} />
-                {/* <Badge badgeContent={3} color="primary"> */}
+                <Badge badgeContent={unreadStudies.length} color="primary">
                 <NotificationsIcon
                   onClick={(e) => setNotification(e.currentTarget)}
                   style={{ marginLeft: 15 }}
                 />
-                {/* </Badge> */}
+                </Badge>
                 <Popover
                   id={id}
                   open={open}
@@ -273,7 +273,7 @@ export default function App(props) {
                                   </Link>
                                 </Grid>
                                 <Grid item md={4}>
-                                  <Link to="#" style={{ float: "right" }}>
+                                  <Link to={`/Studies/${s.StudyId}`}style={{ float: "right" }}>
                                     <Typography
                                       variant="label"
                                       style={{
@@ -353,7 +353,7 @@ export default function App(props) {
                               </Typography>
                             </Grid>
                             <Grid item md={5}>
-                              <Link to="#">
+                              <Link to={`/Studies/${s.StudyId}`}>
                                 <Typography
                                   variant="label"
                                   style={{
