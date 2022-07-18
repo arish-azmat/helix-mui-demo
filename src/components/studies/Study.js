@@ -14,7 +14,7 @@ export default function Study({ study, markUnmarkAsFav }) {
     const [showTitle, setShowTitle] = useState(false)
 
     return (
-        <Card style={{ paddingLeft: '15px', marginTop: 15, border: '1px solid #0000001a' }}>
+        <Card style={{ paddingLeft: '15px', marginTop: 15,  }}>
             <Grid container >
                 <Grid item md={0.3} onClick={() => { setFav(!fav); markUnmarkAsFav(study) }}>
                     {fav ? <StarIcon style={{ margin: '15px 0', cursor: "pointer" }} /> : <StarBorderIcon style={{ margin: '15px 0', cursor: "pointer" }} />}

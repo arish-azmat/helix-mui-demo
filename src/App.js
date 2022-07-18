@@ -140,9 +140,9 @@ export default function App(props) {
       StudyTitle: "A PHASE 3, RANDOMIZED, OBSERVER-BLIND STUDY TO EVALUATE",
     },
   ];
-  const Logo={
-    helix:logo,
-    mui:'https://www.saama.com/wp-content/themes/saama/assets/img/saama-logo-white-tag.svg'
+  const Logo = {
+    helix: logo,
+    mui: 'https://www.saama.com/wp-content/themes/saama/assets/img/saama-logo-white-tag.svg'
   }
   return (
     <Box sx={{ display: "flex" }}>
@@ -159,7 +159,7 @@ export default function App(props) {
             </Grid>
             <Grid item xs={7}></Grid>
             <Grid item xs={4}>
-              <div style={{ marginTop: 25, fontSize: 20, float: "right" }}>
+              <div style={{ marginTop: 25, fontSize: 20, float: "right", display: 'flex', alignItems: 'center' }}>
                 <ChangeTheme type={props.type} setType={props.setType} />
                 <SearchIcon />
                 <AccountCircleIcon style={{ marginLeft: 15 }} />
@@ -373,8 +373,8 @@ export default function App(props) {
                 </Popover>
                 <ShoppingCartIcon style={{ marginLeft: 15 }} />
                 <Button
-                 
-                  style={{ marginLeft: 18, marginTop: -13 }}
+
+                  style={{ marginLeft: 18, }}
                   className="sigma-btn"
                 >
                   LOG OUT
@@ -391,7 +391,7 @@ export default function App(props) {
         style={{ marginTop: 15, padding: 0 }}
       >
         <Header />
-        <div style={{padding:'15px'}}>
+        <div style={{ padding: '15px' }}>
           <Routes>
             <Route exact path="/Studies" element={<Studies />} />
             <Route exact path="/Studies/:studyID" element={<StudyDetails />} />

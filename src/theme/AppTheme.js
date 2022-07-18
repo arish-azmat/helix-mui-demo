@@ -12,17 +12,17 @@ const AppTheme = ({ children, type }) => {
                     main: "#eb0014",
                 },
             },
-            components:{
-                MuiAppBar:{
-                    styleOverrides:{
-                        root:{
+            components: {
+                MuiAppBar: {
+                    styleOverrides: {
+                        root: {
                             // background:'#00000087'
                         }
                     }
                 },
-                MuiButton:{
-                    defaultProps:{
-                        variant:'contained'
+                MuiButton: {
+                    defaultProps: {
+                        variant: 'contained'
                     }
                 }
             }
@@ -42,8 +42,8 @@ const AppTheme = ({ children, type }) => {
                             borderRadius: '20px'
                         }
                     },
-                    defaultProps:{
-                        variant:'outlined'
+                    defaultProps: {
+                        variant: 'outlined'
                     }
                 },
                 MuiListItemIcon: {
@@ -130,6 +130,13 @@ const AppTheme = ({ children, type }) => {
 
                     }
                 },
+                MuiCard: {
+                    styleOverrides: {
+                        root: {
+                            border: '1px solid #0000001a'
+                        }
+                    }
+                }
 
             }
         });
